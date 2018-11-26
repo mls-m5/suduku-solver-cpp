@@ -1,0 +1,10 @@
+*.o
+.depend
+*.so
+*.swp
+*~
+.cproject
+.project
+.settings/
+program
+
