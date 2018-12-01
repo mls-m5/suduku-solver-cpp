@@ -285,10 +285,10 @@ public:
 			cout << endl;
 			}
 			if (y % 3 == 2) {
-				cout << "====================================" << endl;
+				cout << "======================================" << endl;
 			}
 			else {
-				cout << "------------------------------------" << endl;
+				cout << "--------------------------------------" << endl;
 			}
 		}
 
@@ -356,7 +356,7 @@ public:
 			section->checkUniquenes();
 		}
 		for (auto &quadrant: quadrants) {
-//			quadrant.checkDoubleRule();
+			quadrant.checkDoubleRule();
 		}
 	}
 
@@ -404,9 +404,10 @@ void Quadrant::checkDoubleRule() {
 				possibleCells.back()->addNumber(n);
 			}
 			else if (possibleCells.front()->y == possibleCells.back()->y) {
-				board->row(possibleCells.front()->x).removeNumber(n);
+				board->row(possibleCells.front()->y).removeNumber(n);
 				possibleCells.front()->addNumber(n);
 				possibleCells.back()->addNumber(n);
+//				cout << "clearing " << n << " from row " << possibleCells.front()->xkk
 			}
 		}
 	}
