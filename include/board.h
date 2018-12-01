@@ -169,7 +169,13 @@ public:
 		}
 	}
 
+	inline auto begin() {
+		return cells.begin();
+	}
 
+	inline auto end() {
+		return cells.end();
+	}
 
 	std::vector<Cell *> cells;
 	class Board *board;
@@ -382,6 +388,19 @@ public:
 				}
 			}
 			cout << "]";
+		}
+		else if (format == "raw") {
+//			for (auto &row: rows) {
+//				for (auto cell: row) {
+//					cout << cell->value;
+//				}
+//				cout << endl;
+//			}
+			for (auto &cell: cells) {
+				cout << cell.value;
+			}
+
+			cout << endl;
 		}
 	}
 
